@@ -21,11 +21,12 @@ class Directory extends Component {
         const { navigate } = this.props.navigation;
         const renderDirectoryItem = ({item}) => {
             return (
-                <ListItem
+                <Tile
                     title={item.name}
-                    subtitle={item.description}
+                    caption={item.description}
+                    featured
                     onPress={() => navigate('CampsiteInfo', {campsiteId: item.id })}
-                    leftAvatar={{uri: baseUrl + item.image}}
+                    imageSrc={{uri: baseUrl + item.image}}
                 />
             );
         };
