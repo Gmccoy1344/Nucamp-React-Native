@@ -55,9 +55,7 @@ function RenderCampsite(props) {
                     ],
                     { cancelable: false }
                 );
-            } 
-            
-            if (recognizeComment(gestureState)) {
+            } else if (recognizeComment(gestureState)) {
                 props.onShowModal();
             }
             return true;
